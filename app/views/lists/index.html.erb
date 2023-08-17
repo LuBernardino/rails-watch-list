@@ -1,11 +1,7 @@
-<h1>INDEX LISTS</h1>
+<h1 class="img-home mb-3">Save and kind of movies</h1>
 
-<ul class="list-group list-group-flush">
+<ul class="cards-style d-flex flex-wrap gap-3">
   <% @lists.each do |list| %>
-    <li class="m-2 col-6 p-2 list-group-item"><%= link_to list.name, list_path(list), class:"text-decoration-none" %></li>
+    <li class="card-category p-2"><%= link_to list.name, list_path(list), class:"text-decoration-none card_category" %></li>
   <% end %>
 </ul>
-
-<div class="form-group m-5 my-5">
-  <%= link_to 'Create a new list', new_list_path, class:"btn btn-warning m-2 text-decoration-none col-4"%>
-</div>

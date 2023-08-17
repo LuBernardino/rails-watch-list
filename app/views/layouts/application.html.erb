@@ -11,6 +11,13 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Navbar</a>
+    <form class="form-inline">
+      <%= link_to 'Create a new list', new_list_path, class:"btn btn-warning m-2 text-decoration-none"%>
+      <%# <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> %>
+    </form>
+  </nav>
     <%= yield %>
   </body>
 </html>

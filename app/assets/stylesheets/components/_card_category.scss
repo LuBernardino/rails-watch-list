@@ -1,0 +1,16 @@
+.cards-style {
+  list-style-type: none;
+
+  .card_category {
+    background-image: asset-url("classic-filme-unsplash.jpg");
+    background-size: cover;
+    color: #FFF;
+    width: 450px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+  }
+}
