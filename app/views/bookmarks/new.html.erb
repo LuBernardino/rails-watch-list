@@ -1,0 +1,13 @@
+<h1>NEW bookmark</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+
+  <div class="form-group m-5">
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+  </div>
+
+  <div class="form-group m-5 my-5">
+    <%= f.button :submit, class: 'btn btn-info col-12' %>
+  </div>
+<% end %>
