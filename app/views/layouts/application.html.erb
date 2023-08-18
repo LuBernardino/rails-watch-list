@@ -11,11 +11,21 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-light bg-light justify-content-between">
-    <a class="navbar-brand">Navbar</a>
+  <nav class="navbar navbar-light bg-light justify-content-between mx-2">
+    <div class="d-flex gap-2 align-items-center">
+      <%= image_tag "popcorn.png", alt: "Logo cinema", width: 50 %>
+      <a class="navbar-brand"><strong>GO CINECORN</strong></a>
+    </div>
+
     <form class="form-inline">
-      <%= link_to 'Create a new list', new_list_path, class:"btn btn-warning m-2 text-decoration-none"%>
-      <%# <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> %>
+      <% if controller_name == 'lists' && action_name == 'index' %>
+       <%= link_to 'Create a new list', new_list_path, class:"btn btn-new m-2 text-decoration-none"%>
+      <% elsif controller_name == 'lists' && action_name == 'show' %>
+        <%= link_to 'Back', lists_path, class:"btn btn-back m-2 text-decoration-none"%>
+        <%= link_to 'Create a bookmark', new_list_bookmark_path(@list.id), class:"btn btn-new m-2 text-decoration-none"%>
+      <% elsif controller_name == 'bookmarks' && action_name == 'new' %>
+        <%= link_to 'Back', list_path(@list.id), class:"btn btn-new m-2 text-decoration-none"%>
+      <% end %>
     </form>
   </nav>
     <%= yield %>
