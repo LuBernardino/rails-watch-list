@@ -1,10 +1,13 @@
 .cards-style {
   list-style-type: none;
 
-  .card_category {
-    background-image: asset-url("classic-filme-unsplash.jpg");
+  .card-category {
+    // background-image: asset-url("classic-filme-unsplash.jpg");
     background-size: cover;
     color: #FFF;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    // font-weight: bold;
+    letter-spacing: 4px;
     width: 450px;
     height: 250px;
     display: flex;

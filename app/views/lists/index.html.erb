@@ -2,6 +2,8 @@
 
 <ul class="cards-style d-flex flex-wrap gap-3">
   <% @lists.each do |list| %>
-    <li class="card-category p-2"><%= link_to list.name, list_path(list), class:"text-decoration-none card_category" %></li>
+    <li class="p-3" >
+      <%= link_to list.name, list_path(list), class:"text-decoration-none card-category", style: list.image.attached? ? "background-image: url(\'#{url_for(list.image)}\')" : "background-color:  black" %>
+    </li>
   <% end %>
 </ul>
